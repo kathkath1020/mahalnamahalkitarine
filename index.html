@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ff77a6">
+  <meta name="description" content="A little birthday moment, made with love">
+  <title>Happy Birthday Katherine 💗</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="birthdayApp" class="app-shell">
+    <div class="ambient ambient-one" aria-hidden="true"></div>
+    <div class="ambient ambient-two" aria-hidden="true"></div>
+    <div id="floatingDecorations" class="floating-decorations" aria-hidden="true"></div>
+
+    <!-- STAGE 1: Countdown -->
+    <section id="stage-countdown" class="stage stage-countdown is-active" aria-labelledby="countdownHeading">
+      <div class="center-stack countdown-stack">
+        <div id="countdownSymbol" class="countdown-symbol" aria-hidden="true">5</div>
+        <p id="countdownEyebrow" class="eyebrow">A LITTLE SURPRISE</p>
+        <h1 id="countdownHeading" class="intro-title">Something lovely is coming...</h1>
+        <p id="countdownCaption" class="soft-caption" aria-live="polite">Get ready in <span id="countdownNumber">5</span></p>
+        <button id="startButton" class="pill-button pink-button" type="button" hidden>Next <span aria-hidden="true">💕</span></button>
+      </div>
+      <p class="tiny-note">made with <span aria-hidden="true">♥</span></p>
+    </section>
+
+    <!-- STAGE 2: Birthday cake -->
+    <section id="stage-cake" class="stage stage-cake" aria-labelledby="cakeHeading" inert>
+      <video id="cakeBackgroundVideo" class="cake-background-video" muted loop playsinline preload="auto" poster="assets/cake-background-poster.jpg" aria-hidden="true" tabindex="-1">
+        <source src="assets/cake-background.mp4" type="video/mp4">
+      </video>
+      <div class="center-stack cake-stack">
+        <p class="eyebrow blue-eyebrow">MAKE A WISH</p>
+        <h2 id="cakeHeading" class="cake-heading">A cake just for you</h2>
+        <div class="cake-scene">
+          <span class="cake-sticker sticker-left" aria-hidden="true">♡</span>
+          <span class="cake-sticker sticker-right" aria-hidden="true">♡</span>
+          <svg class="birthday-cake" viewBox="0 0 320 330" role="img" aria-labelledby="cakeArtTitle cakeArtDesc">
+            <title id="cakeArtTitle">A pastel birthday cake</title>
+            <desc id="cakeArtDesc">A pink frosted cake with sprinkles, little sweets and a striped candle with a glowing flame.</desc>
+            <defs>
+              <linearGradient id="cakeBase" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#fff0f5"/><stop offset=".55" stop-color="#f7a9ce"/><stop offset="1" stop-color="#df75b2"/></linearGradient>
+              <linearGradient id="icing" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#fffdfb"/><stop offset="1" stop-color="#ffd8eb"/></linearGradient>
+              <linearGradient id="plate" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#83dfff"/></linearGradient>
+              <linearGradient id="candle" x1="0" x2="1"><stop offset="0" stop-color="#3dd6dd"/><stop offset=".5" stop-color="#fff179"/><stop offset="1" stop-color="#41dce3"/></linearGradient>
+              <radialGradient id="flame" cx="50%" cy="72%" r="72%"><stop offset="0" stop-color="#fff6a5"/><stop offset=".5" stop-color="#ffb52c"/><stop offset="1" stop-color="#ff7b4e" stop-opacity="0"/></radialGradient>
+              <filter id="cakeShadow" x="-30%" y="-30%" width="160%" height="180%"><feDropShadow dx="0" dy="10" stdDeviation="9" flood-color="#508baa" flood-opacity=".24"/></filter>
+            </defs>
+            <!-- balloons -->
+            <g opacity=".93">
+              <path d="M64 110 Q56 135 73 153" stroke="#fff" stroke-opacity=".65" fill="none" stroke-width="1.5"/>
+              <ellipse cx="62" cy="88" rx="20" ry="25" fill="#ff8fb7" transform="rotate(-20 62 88)"/>
+              <ellipse cx="62" cy="82" rx="7" ry="10" fill="#fff" opacity=".24"/>
+              <path d="M58 111 l8 0 -4 7z" fill="#ff8fb7"/>
+              <path d="M252 105 Q269 133 244 156" stroke="#fff" stroke-opacity=".65" fill="none" stroke-width="1.5"/>
+              <ellipse cx="258" cy="80" rx="20" ry="25" fill="#ffd27d" transform="rotate(17 258 80)"/>
+              <ellipse cx="252" cy="73" rx="7" ry="10" fill="#fff" opacity=".24"/>
+              <path d="M254 103 l8 0 -4 7z" fill="#ffd27d"/>
+              <ellipse cx="92" cy="116" rx="14" ry="18" fill="#91e3ed"/>
+              <ellipse cx="232" cy="122" rx="15" ry="19" fill="#c3a5ff"/>
+            </g>
+            <!-- candle -->
+            <g id="candleGroup">
+              <ellipse id="flameGlow" cx="160" cy="35" rx="23" ry="28" fill="#ffbc42" opacity=".22"/>
+              <path id="flameShape" d="M160 7 C139 29 152 44 160 45 C174 40 179 25 160 7Z" fill="url(#flame)"/>
+              <path id="flameCore" d="M160 19 C151 30 157 38 160 39 C166 34 168 27 160 19Z" fill="#fff5ab"/>
+              <rect x="150" y="39" width="20" height="69" rx="5" fill="url(#candle)" stroke="#f9ffff" stroke-width="2"/>
+              <path d="M151 48 L169 62 M151 65 L169 79 M151 82 L169 96" stroke="#ff8fc0" stroke-width="8" opacity=".92"/>
+              <path d="M160 39 v-7" stroke="#57404a" stroke-width="2.5" stroke-linecap="round"/>
+            </g>
+            <!-- cake + plate -->
+            <g filter="url(#cakeShadow)">
+              <ellipse cx="160" cy="285" rx="112" ry="19" fill="url(#plate)" stroke="#fff" stroke-width="3"/>
+              <ellipse cx="160" cy="281" rx="89" ry="12" fill="#f5a5d0" opacity=".38"/>
+              <path d="M76 186 Q160 204 244 186 L235 259 Q160 282 85 259Z" fill="url(#cakeBase)" stroke="#fff6fd" stroke-width="2"/>
+              <path d="M76 186 Q160 209 244 186 L244 202 Q160 226 76 202Z" fill="#faacd4"/>
+              <path d="M76 186 Q160 209 244 186 Q243 165 160 162 Q77 165 76 186Z" fill="url(#icing)" stroke="#ffe6f1" stroke-width="2"/>
+              <path d="M91 197 C94 210 103 211 108 198 C113 184 120 202 122 209 C127 221 140 218 143 203 C147 187 155 197 160 209 C166 223 178 216 181 203 C186 187 196 199 199 210 C203 219 215 215 220 195" fill="none" stroke="#fff1f8" stroke-width="8" stroke-linecap="round"/>
+              <path d="M112 234 Q160 247 208 234" fill="none" stroke="#cf609f" stroke-width="4" opacity=".55"/>
+              <path d="M97 252 Q160 265 223 252" fill="none" stroke="#fff1f8" stroke-width="5" opacity=".8"/>
+              <!-- candy decorations -->
+              <g stroke="#fff" stroke-width="1.3">
+                <circle cx="105" cy="183" r="7" fill="#ffc85d"/><circle cx="125" cy="176" r="6" fill="#87dfe7"/>
+                <circle cx="148" cy="183" r="7" fill="#f38fbd"/><circle cx="172" cy="178" r="6" fill="#a98bff"/>
+                <circle cx="196" cy="184" r="7" fill="#ffcd70"/><circle cx="216" cy="179" r="5" fill="#7cdce4"/>
+                <circle cx="112" cy="231" r="5" fill="#91dfe8"/><circle cx="140" cy="241" r="5" fill="#ffc85d"/>
+                <circle cx="180" cy="239" r="5" fill="#fff"/><circle cx="207" cy="229" r="5" fill="#e7a4ff"/>
+              </g>
+              <!-- front frosting swirls -->
+              <g fill="#fff1f8" stroke="#ed9fc9" stroke-width="1.4">
+                <path d="M91 264 C78 253 95 245 100 257 C108 247 119 259 109 268 Q100 274 91 264Z"/>
+                <path d="M136 270 C123 259 140 251 145 263 C153 253 164 265 154 274 Q145 280 136 270Z"/>
+                <path d="M183 269 C170 258 187 250 192 262 C200 252 211 264 201 273 Q192 279 183 269Z"/>
+                <path d="M216 261 C203 250 220 242 225 254 C233 244 244 256 234 265 Q225 271 216 261Z"/>
+              </g>
+              <!-- tiny bow -->
+              <path d="M154 285 Q134 264 128 278 Q127 290 155 290 Q183 290 192 278 Q184 264 163 285Z" fill="#b78fff" stroke="#fff" stroke-width="2"/>
+              <circle cx="159" cy="284" r="7" fill="#f8c6ff" stroke="#fff" stroke-width="2"/>
+            </g>
+            <g id="wishSparkles" fill="#fff" opacity=".9"><path d="M39 167 l4 11 11 4 -11 4 -4 11 -4 -11 -11 -4 11 -4z"/><path d="M275 175 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3z"/><circle cx="92" cy="146" r="3"/><circle cx="232" cy="146" r="3"/></g>
+          </svg>
+        </div>
+        <p id="wishStatus" class="soft-caption" aria-live="polite">Close your eyes, make a wish, then blow the candle ✨</p>
+        <button id="blowButton" class="pill-button blue-button" type="button">Blow Candle <span aria-hidden="true">🎂</span></button>
+        <button id="cakeNextButton" class="pill-button pink-button secondary-next" type="button" hidden>Next <span aria-hidden="true">💕</span></button>
+      </div>
+    </section>
+
+    <!-- STAGE 3: Glowing birthday greeting -->
+    <section id="stage-celebration" class="stage stage-celebration" aria-labelledby="celebrationHeading" inert>
+      <div class="neon-lines" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="center-stack celebration-stack">
+        <p class="eyebrow neon-eyebrow">I'M ALL ABOUT YOU</p>
+        <h2 id="celebrationHeading" class="birthday-wish">Happy Birthday <span id="birthdayNameHeading">Madam ji</span> <span aria-hidden="true">🎂</span></h2>
+        <p class="celebration-caption">May your day be as beautiful as your heart. 💗</p>
+        <button id="letterNextButton" class="pill-button pink-button" type="button">Next <span aria-hidden="true">💌</span></button>
+      </div>
+      <div class="celebration-sparkles" aria-hidden="true">✦　·　♡　·　✧　·　♡　·　✦</div>
+    </section>
+
+    <!-- STAGE 4: Letter / essay -->
+    <section id="stage-letter" class="stage stage-letter" aria-labelledby="letterHeading" inert>
+      <div class="letter-wrap">
+        <article class="letter-card">
+          <div class="letter-top-decoration" aria-hidden="true"><span>♡</span><span>✦</span><span>♡</span></div>
+          <h2 id="letterHeading" class="letter-title">HAPPY BIRTHDAY <span id="letterNameHeading">MY KATHERINE</span> 💌</h2>
+          <div id="letterText" class="letter-text">Your letter will appear here.</div>
+          <div class="letter-signoff">With love, always <span aria-hidden="true">♥</span></div>
+        </article>
+        <p class="letter-footer">Every word is a little piece of my heart. ✨</p>
+        <button id="replayButton" class="text-button" type="button"><span aria-hidden="true">↺</span> Replay the surprise</button>
+      </div>
+    </section>
+  </main>
+
+  <div id="confettiLayer" class="confetti-layer" aria-hidden="true"></div>
+  <script src="script.js"></script>
+</body>
+</html>
